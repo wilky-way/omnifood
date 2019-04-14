@@ -21,19 +21,75 @@ html {
 }
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(img/hero.jpg);/*Linear gradient makes image darker for text visibility*/
-    background-size: cover; /*Make img not zoomed in*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    /*Linear gradient makes image darker for text visibility*/
+    background-size: cover;
+    /*Make img not zoomed in*/
     background-position: center;
     height: 100vh;
 }
 
 .hero-text-box {
-    position: absolute; /*not usign responsive grid. we want to be absolutely positioned so we can horizontally/vertically center it*/
+    position: absolute;
+    /*not usign responsive grid. we want to be absolutely positioned so we can horizontally/vertically center it*/
     width: 1140px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /*moves half of its width up and ot the left to center it*/
+    transform: translate(-50%, -50%);
+    /*moves half of its width up and ot the left to center it*/
 }
+
 h1 {
     margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    /*240 percent of html tag font size declared above.*/
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/*Make sure buttons look the same before/after click*/
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #cf6d17;
+}
+
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
 }
