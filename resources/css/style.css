@@ -19,3 +19,21 @@ html {
     /*top and bottom will be 0 left right auto to center row9*/
     margin: 0 auto;
 }
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(img/hero.jpg);/*Linear gradient makes image darker for text visibility*/
+    background-size: cover; /*Make img not zoomed in*/
+    background-position: center;
+    height: 100vh;
+}
+
+.hero-text-box {
+    position: absolute; /*not usign responsive grid. we want to be absolutely positioned so we can horizontally/vertically center it*/
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*moves half of its width up and ot the left to center it*/
+}
+h1 {
+    margin-top: 0;
+}
