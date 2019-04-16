@@ -80,6 +80,7 @@ h2::after {
 h3 {
     font-size: 110%;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 /*-----Paragraphs--------*/
@@ -93,14 +94,17 @@ h3 {
 .box p {
     font-size: 90%;
     line-height: 145%;
+    text-align: center;
 }
 
 /*-------------Icons--------------*/
 .icon-big {
     font-size: 350%;
-    display: block; /* forces line break*/
+    display: block;
+    /* forces line break*/
     color: #e67e22;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 /*------------Buttons-----------*/
@@ -206,24 +210,59 @@ header {
     border-bottom: 2px solid #e67e22;
 }
 
-.col {
+/*-----------------------------------------------------------------*/
+/* Features */
+/*-----------------------------------------------------------------*/
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+/*-----------------------------------------------------------------*/
+/* Meals Photo Grid*/
+/*-----------------------------------------------------------------*/
+
+.section-meals{
+    padding: 0;
+}
+.meals-showcase {
+    list-style: none;
+    /*remove bullets*/
+    width: 100%;
+    /*4x25% */
+}
+
+.meals-showcase li {
     display: block;
     float: left;
-    margin: 1% 0 1% 1.6%;
+    width: 25%
+        /*4x25% =100*/
 }
 
-.col:first-child {
-    margin-left: 0;
+/*container for photo*/
+.meal-photo {
+    /*has exact width of parent which is 25%, meals-showcase li item*/
+    width: 100%;
+    margin: 0;
+    /*we just see part of image still inside container since it transforms to 115%. Creates a zoom affect*/
+    overflow: hidden;
+    background-color: #000000;
 }
 
-/* all browsers except IE6 and lower */
+.meal-photo img {
+    /*creates an opaque dark affect because we changed background color to black above*/
+    opacity: 0.7; 
+    /*makes img as large as it's container which is .meal-photo which is width of it's parent 25% */
+    width: 100%;
+    height: auto;
+    /* makes image 115% */
+    /*creates zoomed in affect with overflow:hidden*/
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
 
-
-/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-    .col {
-        /*margin: 1% 0 1% 0%;*/
-        margin: 0;
-    }
+.meal-photo img:hover {
+    transform: scale(1.03);
+    opacity: 1;
+    
 }
