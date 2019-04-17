@@ -107,6 +107,39 @@ h3 {
     text-align: center;
 }
 
+.icon-small {
+    /* inline block so we can text-align center them*/
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    /* 3 Secrets to aligh text and icons */
+    line-height: 120%;
+    vertical-align: middle;
+    /*moves up*/
+    margin-top: -5px;
+
+}
+
+/*-----LINKS-----*/
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+
+}
+
 /*------------Buttons-----------*/
 /*Make sure buttons look the same before/after click*/
 .btn:link,
@@ -271,10 +304,11 @@ header {
 /* How It Works*/
 /*-----------------------------------------------------------------*/
 
-.section-steps{
+.section-steps {
     /*very subtle grey color*/
     background-color: #f4f4f4;
 }
+
 /*selects the first of the steps boxes only*/
 .steps-box:first-child {
     /*text-align works for all inline block elements like <img> */
@@ -303,7 +337,10 @@ header {
 }
 
 /*we need to clear floats after an element. needs to be used after all those float images in the li in meals-showcase class*/
-.clearfix {zoom: 1;}
+.clearfix {
+    zoom: 1;
+}
+
 .clearfix:after {
     content: '.';
     clear: both;
@@ -328,8 +365,29 @@ header {
     margin-right: 25px;
 }
 
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
+
 .btn-app img {
     height: 50px;
     width: auto;
     margin-right: 10px;
+}
+
+/*-----------------------------------------------------------------*/
+/* Cities*/
+/*-----------------------------------------------------------------*/
+
+.box img {
+    /*same width as box class*/
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+
+}
+
+.city-feature {
+    margin-bottom: 5px;
 }
