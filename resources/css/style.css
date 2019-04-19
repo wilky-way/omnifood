@@ -191,6 +191,8 @@ header {
     background-size: cover;
     /*Make img not zoomed in*/
     background-position: center;
+    /*makes image stay in place when scrolling*/
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -390,4 +392,55 @@ header {
 
 .city-feature {
     margin-bottom: 5px;
+}
+
+/*-----------------------------------------------------------------*/
+/*Testimonials*/
+/*-----------------------------------------------------------------*/
+
+.section-testimonials {
+    /*Make a backgrond image for the whole section in CSS*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    /*makes image stay in place when scrolling*/
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    /*Since we use absolute position in blockquote::before below*/
+    position: relative;
+    margin-top: 40px;
+}
+
+/*
+Writes quotes " to the HTML file
+glyph/iso from css-tricks.com
+*/
+blockquote::before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    /* in order to position exactly where we want it we need to define top and left atrributes*/
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+
+    /* Line BREAK */
+    display: block;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
 }
