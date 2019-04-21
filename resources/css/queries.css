@@ -179,3 +179,14 @@
         width: 100%;
     }
 }
+@supports (-webkit-overflow-scrolling: touch) {
+    /* CSS for iOS devices */
+    /* Fixes issueds with Safari Mobile displays background-attachement-fixed is blank.*/
+    header {
+        background-attachment: scroll;
+    }
+ 
+    .section-testimonials {
+        background-attachment: scroll;
+     }
+}
